@@ -37,6 +37,8 @@
     <div class="item">ロール: </div><div class="value" id="roll"></div>
     <div class="item">ピッチ: </div><div class="value" id="pitch"></div>
     <div class="item">ヨー: </div><div class="value" id="yaw"></div>
+    <div class="item">方位: </div><div class="value" id="azi"></div>
+        <div class="item">距離: </div><div class="value" id="dist"></div>
     <!-- 機体を描画 -->
     <a-scene>
       <!-- 本体 -->
@@ -84,6 +86,8 @@
             $("#yaw").text(dataArray[3]);
             $("#lat").text(dataArray[4]);
             $("#lng").text(dataArray[5]);
+            $("#azi").text(dataArray[6]);
+              $("#dist").text(dataArray[7]);
 
             cube.setAttribute("rotation", {x:Math.round(dataArray[2]),y:Math.round(dataArray[3]) * -1,z:Math.round(dataArray[1]) * -1});
           }
